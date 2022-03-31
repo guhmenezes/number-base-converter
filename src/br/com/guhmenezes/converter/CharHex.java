@@ -25,4 +25,16 @@ public class CharHex {
             default -> {return Character.forDigit(n,10);}
         }
     }
+
+    public static int charToDig(String n){
+        return switch (n) {
+            case "A" -> 10;
+            case "B" -> 11;
+            case "C" -> 12;
+            case "D" -> 13;
+            case "E" -> 14;
+            case "F" -> 15;
+            default -> Integer.parseInt(n);
+        };
+    }
 }

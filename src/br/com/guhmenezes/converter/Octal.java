@@ -5,20 +5,20 @@ import java.util.Collections;
 import java.util.List;
 
 public class Octal {
-    private static List<Integer> octal = new ArrayList<>();
+    private static final List<Integer> OCTAL = new ArrayList<>();
 
 
     public static void nToOctal(int n) {
         int quot = n;
         while (quot > 7) {
             int rest = quot % 8;
-            octal.add(rest);
+            OCTAL.add(rest);
             quot /= 8;
         }
-        octal.add(quot);
-        Collections.reverse(octal);
-        for (int dig : octal) System.out.print(dig);
-        octal.clear();
+        OCTAL.add(quot);
+        Collections.reverse(OCTAL);
+        for (int dig : OCTAL) System.out.print(dig);
+        OCTAL.clear();
         System.out.println();
 
     }

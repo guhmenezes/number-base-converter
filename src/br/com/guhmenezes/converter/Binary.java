@@ -5,20 +5,27 @@ import java.util.Collections;
 import java.util.List;
 
 public class Binary {
-    private static List<Integer> binary = new ArrayList<>();
+    private static final List<Integer>
+    BYNARY= new ArrayList<>();
 
 
     public static void nToBinary(int n){
         int quot = n;
         while (quot > 1){
             int rest = quot % 2;
-            binary.add(rest);
+
+            BYNARY.add(rest);
             quot /= 2;
         }
-        binary.add(quot);
-        Collections.reverse(binary);
-        for (int dig : binary) System.out.print(dig);
-        binary.clear();
+
+        BYNARY.add(quot);
+        Collections.reverse(
+                BYNARY
+        );
+        for (int dig :
+        BYNARY) System.out.print(dig);
+
+        BYNARY.clear();
         System.out.println();
 
     }
