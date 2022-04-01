@@ -4,7 +4,7 @@ import static br.com.guhmenezes.converter.CharHex.charToDig;
 
 public class Decimal {
 
-    public static void nToDecimal(String n,int base){
+    public static int nToDecimal(String n, int base){
         int decimal = 0;
         int digit;
         String[] digits;
@@ -24,5 +24,6 @@ public class Decimal {
             }
         }
         System.out.println(decimal);
+        return decimal;
     }
 }

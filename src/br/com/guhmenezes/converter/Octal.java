@@ -8,14 +8,14 @@ public class Octal {
     private static final List<Integer> OCTAL = new ArrayList<>();
 
 
-    public static void nToOctal(int n) {
-        int quot = n;
+    public static void nToOctal(long n) {
+        long quot = n;
         while (quot > 7) {
-            int rest = quot % 8;
-            OCTAL.add(rest);
+            long rest = quot % 8;
+            OCTAL.add((int)rest);
             quot /= 8;
         }
-        OCTAL.add(quot);
+        OCTAL.add((int)quot);
         Collections.reverse(OCTAL);
         for (int dig : OCTAL) System.out.print(dig);
         OCTAL.clear();

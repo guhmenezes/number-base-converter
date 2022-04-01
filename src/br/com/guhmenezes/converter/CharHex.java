@@ -27,7 +27,7 @@ public class CharHex {
     }
 
     public static int charToDig(String n){
-        return switch (n) {
+        return switch (n.toUpperCase()) {
             case "A" -> 10;
             case "B" -> 11;
             case "C" -> 12;

@@ -10,15 +10,15 @@ import static br.com.guhmenezes.converter.CharHex.digToChar;
 public class Hexadecimal {
     private static final List<Character> HEXA = new ArrayList<>();
 
-    public static void nToHexa(int n) {
-        int quot = n;
+    public static void nToHexa(long n) {
+        long quot = n;
         while (quot > 15) {
-            int rest = quot % 16;
-            HEXA.add(digToChar(rest));
+            long rest = quot % 16;
+            HEXA.add(digToChar((int)rest));
             quot /= 16;
         }
 
-        HEXA.add(digToChar(quot));
+        HEXA.add(digToChar((int)quot));
         Collections.reverse(HEXA);
         for (Character dig : HEXA) {
             System.out.print(dig);

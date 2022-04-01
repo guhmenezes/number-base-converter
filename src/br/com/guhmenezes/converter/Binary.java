@@ -9,16 +9,16 @@ public class Binary {
     BYNARY= new ArrayList<>();
 
 
-    public static void nToBinary(int n){
-        int quot = n;
+    public static void nToBinary(long n){
+        long quot = n;
         while (quot > 1){
-            int rest = quot % 2;
+            long rest = quot % 2;
 
-            BYNARY.add(rest);
+            BYNARY.add((int)rest);
             quot /= 2;
         }
 
-        BYNARY.add(quot);
+        BYNARY.add((int)quot);
         Collections.reverse(
                 BYNARY
         );
@@ -29,4 +29,25 @@ public class Binary {
         System.out.println();
 
     }
+
+//    public static void nToBinary(String n){
+//        long quot = Long.parseLong(n);
+//        while (quot > 1){
+//            long rest = quot % 2;
+//
+//            BYNARY.add((int)rest);
+//            quot /= 2;
+//        }
+//
+//        BYNARY.add((int)quot);
+//        Collections.reverse(
+//                BYNARY
+//        );
+//        for (int dig :
+//                BYNARY) System.out.print(dig);
+//
+//        BYNARY.clear();
+//        System.out.println();
+//
+//    }
 }
